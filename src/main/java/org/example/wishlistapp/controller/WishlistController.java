@@ -43,7 +43,7 @@ public class WishlistController {
         }
 
         model.addAttribute("wishlists", wishlistService.getAllWishlistsById(userSessionId));
-        return "/user";
+        return "user";
     }
 
 
@@ -132,7 +132,7 @@ public class WishlistController {
                            Model model) {
         Wish wish = wishlistService.getWishById(wishId);
         model.addAttribute("wish", wish);
-        return "/wish";
+        return "wish";
     }
 
     @PostMapping("/{wishlistId}/wish")
