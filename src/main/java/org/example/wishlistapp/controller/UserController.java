@@ -49,7 +49,7 @@ public class UserController {
 
         if (userLoggedIn != null) {
             session.setAttribute("userId", userLoggedIn.getUserId());
-            return "redirect:/user/" + userLoggedIn.getUserId();
+            return "redirect:/wishlist/user/" + userLoggedIn.getUserId();
         } else {
             model.addAttribute("error", "Invalid email or password");
             return "index";
